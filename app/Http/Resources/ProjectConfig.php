@@ -20,6 +20,8 @@ class ProjectConfig extends JsonResource
             'key' => $this->key,
             'secret' => $this->secret,
             'path' => null,
+            'host' => env('WSC_URL'),
+            'port' => env('WSC_PORT'),
             'capacity' => null,
             'enable_client_messages' => $this->messages,
             'enable_statistics' => $this->statistics,

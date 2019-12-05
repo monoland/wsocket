@@ -57,8 +57,6 @@ export default {
         chart: null,
         pusher: null,
         app: null,
-        port: null,
-        apps: null,
         xform: {
             channel: null,
             event: null,
@@ -95,9 +93,9 @@ export default {
 
         connect() {
             this.pusher = new Pusher(this.app.key, {
-                wsHost: this.app.host === null ? window.location.hostname : 'wsocket.loc',
-                wsPort: this.port === null ? 6001 : this.port,
-                wssPort: this.port === null ? 6001 : this.port,
+                wsHost: this.app.host,
+                wsPort: this.app.port,
+                wssPort: this.app.port,
                 wsPath: this.app.path === null ? '' : this.app.path,
                 disableStats: true,
                 authEndpoint: '/wsc/auth',
