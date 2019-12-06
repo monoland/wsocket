@@ -67,6 +67,7 @@ export default {
     created() {
         this.tableHeaders([
             { text: 'Name', value: 'name' },
+            { text: 'ID', value: 'id' },
             { text: 'Key', value: 'key' },
             { text: 'Secret', value: 'secret' },
             { text: 'Updated', value: 'updated_at', class: 'datetime-field' }
